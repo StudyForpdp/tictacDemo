@@ -209,6 +209,37 @@
                     Console.WriteLine();
                 }
                 Console.WriteLine("O'yinda g'olib aniqlanmadi natija durang \n \n");
+                
+             } 
+            
+            Console.Write("O'yinni qayta boshlashni xohlasangiz 1 ni bosing, aks holda 0 tugmasini bosing : ");
+            while (true)
+            {
+                int RestartOrOver = int.Parse(Console.ReadLine());
+
+                if (RestartOrOver == 1)
+                {
+                    Console.Clear();
+                    Main(args);
+                    break;
+                }
+                else if (RestartOrOver == 0)
+                {
+                    
+                    Console.Clear();
+                    break;  
+                }
+
+                if (RestartOrOver != 0 || RestartOrOver != 1)
+                {
+                    Console.Write("Iltimos, O'yinni qayta boshlash uchun 1 ni bosing, aks holda 0 tugmasini : ");
+
+                }
+
+                if (!int.TryParse(Console.ReadLine(), out RestartOrOver))
+                {
+                    Console.Write("Iltimos, O'yinni qayta boshlash uchun 1 ni bosing, aks holda 0 tugmasini : ");
+                }
             }
         }
 
